@@ -1,13 +1,14 @@
 ﻿using SubtypeCovariance;
+
 class Program
 {
     static void Main(string[] args)
     {
-        // Use generic repository
-        var entityRepository = new Repository<Entity>();
-        var userRepository = new Repository<User>();
+        // Use specific repositories
+        var entityRepository = new EntityRepository();
+        var userRepository = new UserRepository();
 
-        // Retrieve entity and user via the repository
+        // Retrieve entity and user via their respective repositories
         Entity myEntity = entityRepository.GetByID(Guid.NewGuid());
         User myUser = userRepository.GetByID(Guid.NewGuid());
 

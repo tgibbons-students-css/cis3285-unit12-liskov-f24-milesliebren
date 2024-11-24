@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SubtypeCovariance
 {
-    public class UserRepository : IEntityRepository<User>
+    public class UserRepository : EntityRepository
     {
-        User IEntityRepository<User>.GetByID(Guid id)
+        public override Entity GetByID(Guid id)
         {
             return new User(id);
         }
