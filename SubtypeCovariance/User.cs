@@ -10,11 +10,11 @@ namespace SubtypeCovariance
     {
         public User(Guid newID) : base(newID)
         {
-            EmailAddress = "";
+            EmailAddress = string.Empty;
+            DateOfBirth = DateTime.MinValue;
         }
 
         public string EmailAddress { get; set; }
-
         public DateTime DateOfBirth { get; set; }
     }
 }
