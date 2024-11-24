@@ -2,7 +2,7 @@
 
 namespace SubtypeCovariance
 {
-    public interface IUserRepository : IEntityRepository
+    public interface IUserRepository : IEntityRepository<Entity>
     {
         User GetByID(Guid id);
     }
